@@ -1,0 +1,76 @@
+---
+import AcademicIcon from '../icons/AcademicIcon.astro'
+
+const { lang } = Astro.props
+const { academic } = lang
+---
+
+<section class="mt-10">
+    <header>
+        <h3
+            class="font-bold text-2xl text-indigo-400 flex flex-row items-center gap-2"
+        >
+            {academic.title}
+            <AcademicIcon />
+        </h3>
+    </header>
+    <ul class="ml-6 mt-4 flex flex-col gap-2 justify-between sm:flex-row">
+        <li>
+            <a
+                href="https://dreo.mep.go.cr/esc-manuel-quesada-bastos-copy-11-copy-copy-copy-4/"
+                target="_blank"
+                class="font-semibold text-xl text-indigo-400 cursor-pointer transition"
+            >
+                <span>CTP Francisco J. Orlich</span>
+
+                <svg
+                    class="w-0 h-0 inline-block ml-2"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    ><path stroke="none" d="M0 0h24v24H0z" fill="none"
+                    ></path><path d="M17 7l-10 10"></path><path d="M8 7l9 0l0 9"
+                    ></path></svg
+                >
+            </a>
+            <smal class="font-medium text-sm text-indigo-200 block"
+                >2017 - 2023</smal
+            >
+            <p class="font-medium text-lg text-gray-400">
+                {academic.specialty}
+            </p>
+        </li>
+    </ul>
+</section>
+
+<style>
+    span {
+        position: relative;
+        display: inline-block;
+        text-decoration: none;
+    }
+    a span::after {
+        content: '';
+        position: absolute;
+        height: 2px; /* Grosor del subrayado */
+        bottom: 0;
+        width: 0;
+        left: 0;
+        background-color: currentColor; /* Color del subrayado */
+        transition: width 0.5s ease; /* Duración y tipo de transición */
+    }
+    a:hover span::after {
+        width: 100%;
+    }
+    svg {
+        transition: all 0.2s;
+    }
+    a:hover svg {
+        width: 1rem;
+        height: 1rem;
+        transform: scale(1.3);
+    }
+</style>

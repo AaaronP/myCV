@@ -1,0 +1,39 @@
+---
+import NavButton from './NavButton.astro'
+import AcademicIcon from '../icons/AcademicIcon.astro'
+import HabilitiesIcon from '../icons/HabilitiesIcon.astro'
+import ProjectsIcon from '../icons/ProjectsIcon.astro'
+import AboutIcon from '../icons/AboutIcon.astro'
+
+const { lang } = Astro.props
+const { navButtons } = lang
+---
+
+<nav>
+    <ul class="flex flex-row flex-wrap gap-2 justify-center sm:justify-start">
+        <li>
+            <NavButton href="#about">
+                <AboutIcon />
+                {navButtons.about}
+            </NavButton>
+        </li>
+        <li>
+            <NavButton href="#academic">
+                <AcademicIcon />
+                {navButtons.academic}
+            </NavButton>
+        </li>
+        <li>
+            <NavButton href="#habilities">
+                <HabilitiesIcon />
+                {navButtons.skills}
+            </NavButton>
+        </li>
+        <li>
+            <NavButton href="#projects">
+                <ProjectsIcon />
+                {navButtons.projects}
+            </NavButton>
+        </li>
+    </ul>
+</nav>

@@ -1,0 +1,52 @@
+{
+    "es": {
+        "aptitudes": [
+            "Trabajo en equipo",
+            "Proactivo",
+            "Asertivo",
+            "Responsable",
+            "Creativo",
+            "Empático",
+            "Paciente",
+            "Cordial"
+        ],
+        "programation": [
+            "Javascript",
+            "HTML",
+            "CSS",
+            "React",
+            "MySQL",
+            "Java",
+            "Tailwind",
+            "NodeJS"
+        ],
+        "languages": [
+            "Inglés - Medio"
+        ]
+    },
+    "en": {
+        "aptitudes": [
+            "Teamwork",
+            "Proactive",
+            "Assertive",
+            "Responsible",
+            "Creative",
+            "Empathetic",
+            "Patient",
+            "Cordially"
+        ],
+        "programation": [
+            "Javascript",
+            "HTML",
+            "CSS",
+            "React",
+            "MySQL",
+            "Java",
+            "Tailwind",
+            "NodeJS"
+        ],
+        "languages": [
+            "English - Middle"
+        ]
+    }
+}

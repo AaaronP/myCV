@@ -1,0 +1,88 @@
+---
+// icons
+import JavascriptIcon from '../icons/JavascritpIcon.astro'
+import HTMLIcon from '../icons/HTMLIcon.astro'
+import FirebaseIcon from '../icons/FirebaseIcon.astro'
+import CSSIcon from '../icons/CSSIcon.astro'
+import TailwindIcon from '../icons/TailwindIcon.astro'
+import ReactIcon from '../icons/ReactIcon.astro'
+import ReactRouterIcon from '../icons/ReactRouterIcon.astro'
+import ReduxIcon from '../icons/ReduxIcon.astro'
+import PHPIcon from '../icons/PHPIcon.astro'
+import MySQLIcon from '../icons/MySQLIcon.astro'
+
+// components
+import IconButton from './IconButton.astro'
+
+// props
+const { name, description, date, technologies } = Astro.props
+---
+
+<div
+    class="card bg-[#c7d2fe99] dark:bg-[#80808033] [&>article]:dark:bg-[#1a1a1a99] [&>article]:bg-white transition hover:scale-105"
+>
+    <article class="inner">
+        <header
+            class="flex flex-col-reverse justify-between items-start mb-4 sm:flex-row sm:item-center"
+        >
+            <h3 class="font-semibold text-xl text-indigo-400 max-w-[30rem]">
+                {name}
+            </h3>
+            <div
+                class="font-semibold text-sm text-indigo-300 text-left mb-5 sm:text-right sm:mb-0"
+            >
+                <small class="block">
+                    {date.year}
+                </small>
+                <p class="block whitespace-nowrap">
+                    {date.duration}
+                </p>
+            </div>
+        </header>
+        <p class="font-medium text-lg text-gray-400">
+            {description}
+        </p>
+
+        <footer class="mt-5">
+            <section class="flex flex-wrap gap-3 mt-5 w-3/4 sm:w-full">
+                {
+                    technologies.map((tech) => (
+                        <IconButton tech={tech}>
+                            {tech === 'Javascript' ? <JavascriptIcon /> : null}
+                            {tech === 'React' ? <ReactIcon /> : null}
+                            {tech === 'React router' ? (
+                                <ReactRouterIcon />
+                            ) : null}
+                            {tech === 'Redux' ? <ReduxIcon /> : null}
+                            {tech === 'HTML' ? <HTMLIcon /> : null}
+                            {tech === 'CSS' ? <CSSIcon /> : null}
+                            {tech === 'Tailwind' ? <TailwindIcon /> : null}
+                            {tech === 'Mysql' ? <MySQLIcon /> : null}
+                            {tech === 'Firebase' ? <FirebaseIcon /> : null}
+                            {tech === 'php' ? <PHPIcon /> : null}
+                        </IconButton>
+                    ))
+                }
+            </section>
+        </footer>
+    </article>
+</div>
+
+<style>
+    .card {
+        padding: 3px; /* border width */
+        border-radius: 12px;
+        display: inline-block;
+        position: relative;
+    }
+
+    .inner {
+        border-radius: 10px;
+        padding: 20px;
+    }
+
+    .card p {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+</style>

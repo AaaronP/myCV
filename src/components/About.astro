@@ -1,0 +1,25 @@
+---
+import AboutIcon from '../icons/AboutIcon.astro'
+
+const { lang } = Astro.props
+const { about } = lang
+---
+
+<section class="mt-10">
+    <header>
+        <h3
+            class="font-bold text-2xl text-indigo-400 flex flex-row flex-nowrap gap-3 items-center"
+        >
+            {about.title}
+            <AboutIcon />
+        </h3>
+    </header>
+    <div class="ml-6 mt-4">
+        <p class="font-medium text-gray-400 text-lg">
+            {about.firstDescription}
+        </p>
+        <p class="font-medium text-gray-400 mt-2 text-lg">
+            {about.secondDescription}
+        </p>
+    </div>
+</section>

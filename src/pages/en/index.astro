@@ -1,0 +1,54 @@
+---
+import Header from '../../components/Header.astro'
+import Layout from '../../layouts/Layout.astro'
+import Nav from '../../components/Nav.astro'
+import About from '../../components/About.astro'
+import Projects from '../../components/Projects.astro'
+import Academic from '../../components/Academic.astro'
+import Habilities from '../../components/Habilities.astro'
+
+import habilities from '../../mocks/habilities.json'
+import projects from '../../mocks/projects.json'
+import i18n from '../../mocks/i18n.json'
+
+const langi18n = i18n.en
+const projectsEn = projects.en
+const habilitiesEn = habilities.en
+---
+
+<Layout title="Mi CV">
+    <Header lang={langi18n} />
+    <Nav lang={langi18n} />
+
+    <div
+        id="about"
+        class="w-full bg-slate-200 h-[2px] rounded-xl mt-12 dark:bg-gray-500"
+    >
+    </div>
+
+    <About lang={langi18n} />
+
+    <div
+        id="academic"
+        class="w-full bg-slate-200 h-[2px] rounded-xl mt-12 dark:bg-gray-500"
+    >
+    </div>
+
+    <Academic lang={langi18n} />
+
+    <div
+        id="habilities"
+        class="w-full bg-slate-200 h-[2px] rounded-xl mt-12 dark:bg-gray-500"
+    >
+    </div>
+
+    <Habilities lang={langi18n} habilities={habilitiesEn} />
+
+    <div
+        id="projects"
+        class="w-full bg-slate-200 h-[2px] rounded-xl mt-12 dark:bg-gray-500"
+    >
+    </div>
+
+    <Projects lang={langi18n} project={projectsEn} />
+</Layout>

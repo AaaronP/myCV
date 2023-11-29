@@ -1,0 +1,27 @@
+---
+const { href } = Astro.props
+---
+
+<a
+    href={href}
+    class="card bg-[#c7d2fe99] [&>section]:hover:bg-[#c7d2feaa] dark:bg-[#80808033] [&>section]:hover:dark:bg-[#1a1a1a99] text-violet-500 font-semibold transition-colors"
+>
+    <section class="inner flex flex-row gap-2">
+        <slot name="before" />
+        <slot />
+    </section>
+</a>
+
+<style>
+    .card {
+        padding: 3px; /* border width */
+        border-radius: 12px;
+        display: inline-block;
+        position: relative;
+    }
+
+    .inner {
+        border-radius: 10px;
+        padding: 10px;
+    }
+</style>

@@ -1,0 +1,133 @@
+---
+import { ViewTransitions } from 'astro:transitions'
+import LoveIcon from '../icons/LoveIcon.astro'
+import LanguagesToggle from '../components/LanguagesToggle'
+import ThemeToggle from '../components/ThemeToggle'
+
+const { title } = Astro.props
+const currentPage = Astro.url.pathname
+---
+
+<!doctype html>
+<html lang="es" class="scroll-smooth dark">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Astro description" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+        <ViewTransitions />
+    </head>
+    <body id="header" class="min-h-screen dark:bg-zinc-900">
+        <main class="max-w-2xl px-4 m-auto">
+            <div
+                class="text-right rounded-lg flex items-center justify-between gap-5 mt-10 sm:justify-end"
+            >
+                <LanguagesToggle client:only="react" />
+                <ThemeToggle client:only="react" />
+            </div>
+            <slot />
+        </main>
+
+        <footer
+            class="relative bottom-0 h-full flex mx-auto justify-center mt-32 mb-4"
+        >
+            <p
+                class="font-bold text-lg text-slate-500 flex flex-row items-center"
+            >
+                Made with
+                <LoveIcon />
+                 by AaronP
+            </p>
+        </footer>
+
+        <a
+            href="#header"
+            class="hover:bg-indigo-300 rounded-full p-1 transition right-0 bottom-0 sm:right-40 sm:bottom-20 cursor-pointer fixed"
+        >
+            <svg
+                class="w-0 h-0 lg:w-6 lg:h-6 rotate-[-45deg] dark:text-white"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+                    d="M17 7l-10 10"></path><path d="M8 7l9 0l0 9"></path></svg
+            >
+        </a>
+
+        <style is:global>
+            html {
+                font-family: system-ui, sans-serif;
+                background-size: 224px;
+                color-scheme: dark light;
+                color: black;
+            }
+            /* width */
+            ::-webkit-scrollbar {
+                width: 10px;
+            }
+
+            /* Track */
+            ::-webkit-scrollbar-track {
+                background: #e0e7ff;
+            }
+
+            /* Handle */
+            ::-webkit-scrollbar-thumb {
+                border-radius: 5px;
+                background: #a5b4fc;
+            }
+
+            /* Handle on hover */
+            ::-webkit-scrollbar-thumb:hover {
+                background: #818cf8;
+            }
+        </style>
+        <style>
+            a {
+                animation: bounce 2s ease 5s infinite;
+            }
+
+            @keyframes bounce {
+                0%,
+                20%,
+                50%,
+                80%,
+                100% {
+                    transform: translateY(0);
+                }
+                40% {
+                    transform: translateY(-30px);
+                }
+                60% {
+                    transform: translateY(-15px);
+                }
+            }
+        </style>
+        <script is:inline>
+            const theme = (() => {
+                if (
+                    typeof localStorage !== 'undefined' &&
+                    localStorage.getItem('theme')
+                ) {
+                    return localStorage.getItem('theme')
+                }
+                if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    return 'dark'
+                }
+                return 'light'
+            })()
+
+            if (theme === 'light') {
+                document.documentElement.classList.remove('dark')
+            } else {
+                document.documentElement.classList.add('dark')
+            }
+            window.localStorage.setItem('theme', theme)
+        </script>
+    </body>
+</html>

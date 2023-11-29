@@ -1,0 +1,70 @@
+{
+    "es": [
+        {
+            "name": "Sitio web para la administración de usuarios y dispositivos",
+            "description": "Creación de un sitio web para la administración de usuarios y dispositivos mediante las operaciones CRUD con un login de google, base de datos de firebase con hosting en la misma. Tambíen la integración de un sistema de enrutado con react router, manejo de estado global con react thunk y control de privilegios de usuarios para limitar el acceso a páginas vitales.",
+            "date": {
+                "year": "2023",
+                "duration": "sep - nov"
+            },
+            "technologies": [
+                "Javascript",
+                "HTML",
+                "CSS", 
+                "Tailwind",
+                "React",
+                "React router",
+                "Firebase",
+                "Redux"
+            ]
+        },
+        {
+            "name": "Sitio web para la administración de prestamos de equipo de la biblioteca (libros, laptops, proyectores, ...)",
+            "description": "Desarrollo de un sitio web, para la biblioteca de mi colegio, con formulario para registrar el equipo prestado de la biblioteca, con base de datos mySQL, alojada en el localhost con xampp.",
+            "date": {
+                "year": "2023",
+                "duration": "jul - ago"
+            },
+            "technologies": [
+                "HTML",
+                "CSS",
+                "Mysql",
+                "php"
+            ]
+        }
+    ],
+    "en": [
+        {
+            "name": "Web site for user and device management",
+            "description": "Creation of a website for user and device management through CRUD operations with google login, firebase database with hosting on it. Also integration of a routing system with react router, global state management with react thunk and user privilege control to limit access to vital pages.",
+            "date": {
+                "year": "2023",
+                "duration": "sep - nov"
+            },
+            "technologies": [
+                "Javascript",
+                "HTML",
+                "CSS", 
+                "Tailwind",
+                "React",
+                "React router",
+                "Firebase",
+                "Redux"
+            ]
+        },
+        {
+            "name": "Web site for the administration of library equipment loans (books, laptops, projectors, ...)",
+            "description": "Development of a web site, for my school library, with form to register the equipment borrowed from the library, with mySQL database, hosted on localhost with xampp.",
+            "date": {
+                "year": "2023",
+                "duration": "jul - ago"
+            },
+            "technologies": [
+                "HTML",
+                "CSS",
+                "Mysql",
+                "php"
+            ]
+        }
+    ]
+}

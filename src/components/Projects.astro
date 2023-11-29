@@ -1,0 +1,30 @@
+---
+import ProjectsIcon from '../icons/ProjectsIcon.astro'
+import CardProject from './CardProject.astro'
+
+const { lang, project } = Astro.props
+const { projects } = lang
+---
+
+<section class="mt-10">
+    <header>
+        <h3
+            class="font-bold text-2xl text-indigo-400 flex flex-row gap-2 items-center"
+        >
+            {projects.title}
+            <ProjectsIcon />
+        </h3>
+    </header>
+    <div class="flex flex-col gap-3 ml-6 mt-5">
+        {
+            project.map((proj) => (
+                <CardProject
+                    name={proj.name}
+                    description={proj.description}
+                    date={proj.date}
+                    technologies={proj.technologies}
+                />
+            ))
+        }
+    </div>
+</section>
