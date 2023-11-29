@@ -9,9 +9,8 @@ export default defineConfig({
   experimental: {
     i18n: {
       defaultLocale: "es",
-      locales: ["es", "en", "fr"],
+      locales: ["es", "en"],
       routingStrategy: "prefix-always"
     }
   }
-
 });
