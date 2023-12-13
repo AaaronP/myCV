@@ -5,12 +5,12 @@ import preact from "@astrojs/preact";
 
 // https://astro.build/config
 export default defineConfig({
+  
   integrations: [tailwind(), preact()],
-  experimental: {
-    i18n: {
-      defaultLocale: "es",
-      locales: ["es", "en"],
-      routingStrategy: "prefix-always"
-    }
+
+  i18n: {
+    defaultLocale: "es",
+    locales: ["es", "en"],
+    routingStrategy: "prefix-always"
   }
 });
