@@ -15,34 +15,47 @@ const { academic } = lang
         </h3>
     </header>
     <ul class="ml-6 mt-4 flex flex-col gap-2 justify-between sm:flex-row">
-        <li>
-            <a
-                href="https://dreo.mep.go.cr/esc-manuel-quesada-bastos-copy-11-copy-copy-copy-4/"
-                target="_blank"
-                class="font-semibold text-xl text-indigo-400 cursor-pointer transition"
-            >
-                <span>CTP Francisco J. Orlich</span>
+        {
+            academic.institutions.map((ins) => (
+                <li class="sm:w-64">
+                    <a
+                        href="https://dreo.mep.go.cr/esc-manuel-quesada-bastos-copy-11-copy-copy-copy-4/"
+                        target="_blank"
+                        class="font-semibold text-xl text-indigo-400 cursor-pointer transition"
+                    >
+                        <span>{ins.name}</span>
 
-                <svg
-                    class="w-0 h-0 inline-block ml-2"
-                    viewBox="0 0 24 24"
-                    stroke-width="2"
-                    stroke="currentColor"
-                    fill="none"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    ><path stroke="none" d="M0 0h24v24H0z" fill="none"
-                    ></path><path d="M17 7l-10 10"></path><path d="M8 7l9 0l0 9"
-                    ></path></svg
-                >
-            </a>
-            <smal class="font-medium text-sm text-indigo-200 block"
-                >2017 - 2023</smal
-            >
-            <p class="font-medium text-lg text-gray-400">
-                {academic.specialty}
-            </p>
-        </li>
+                        <svg
+                            class="w-0 h-0 inline-block ml-2"
+                            viewBox="0 0 24 24"
+                            stroke-width="2"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <path d="M17 7l-10 10" />
+                            <>
+                                <path
+                                    stroke="none"
+                                    d="M0 0h24v24H0z"
+                                    fill="none"
+                                />
+                                <path d="M8 7l9 0l0 9" />
+                            </>
+                        </svg>
+                    </a>
+                    <smal class="font-medium text-sm text-indigo-200 block">
+                        {ins.duration}
+                        <i>|</i>
+                        <i>{ins.state}</i>
+                    </smal>
+                    <p class="font-medium text-lg text-gray-400">
+                        {ins.specialty}
+                    </p>
+                </li>
+            ))
+        }
     </ul>
 </section>
 

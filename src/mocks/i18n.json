@@ -17,7 +17,23 @@
         },
         "academic": {
             "title": "Formación académica",
-            "specialty": "Desarrollo de software y mantenimiento de equipo."
+            "institutions": [
+                {
+                    "name": "CTP Francisco J. Orlich",
+                    "link": "https://dreo.mep.go.cr/esc-manuel-quesada-bastos-copy-11-copy-copy-copy-4/",
+                    "duration": "2017 - 2023",
+                    "specialty": "Desarrollo de software y mantenimiento de equipo.",
+                    "state": "Completado"
+                },
+                {
+                    "name": "TEC",
+                    "link": "https://www.tec.ac.cr/",
+                    "duration": "2024 Feb",
+                    "specialty": "Ingeniería en computación",
+                    "state": "Futuro"
+                }
+            ],
+            "specialty": ["Desarrollo de software y mantenimiento de equipo.", "Ingeniería en computación"]
         },
         "skills": {
             "title": "Habilidades",
@@ -47,7 +63,23 @@
         },
         "academic": {
             "title": "Academic formation",
-            "specialty": "Software development and equipment maintenance."
+            "institutions": [
+                {
+                    "name": "CTP Francisco J. Orlich",
+                    "link": "https://dreo.mep.go.cr/esc-manuel-quesada-bastos-copy-11-copy-copy-copy-4/",
+                    "duration": "2017 - 2023",
+                    "specialty": "Software development and equipment maintenance.",
+                    "state": "Completed"
+                },
+                {
+                    "name": "TEC",
+                    "link": "https://www.tec.ac.cr/",
+                    "duration": "2024 Feb",
+                    "specialty": "Computer Engineering",
+                    "state": "Future"
+                }
+            ],
+            "specialty": ["Software development and equipment maintenance.", "Computer Engineering"]
         },
         "skills": {
             "title": "Skills",
