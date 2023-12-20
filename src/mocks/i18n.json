@@ -12,8 +12,8 @@
         },
         "about": {
             "title": "Sobre mí",
-            "firstDescription": "Como estudiante, me caracterizo por ser responsable, asertivo y puntual. Mi dedicación y pasión se centran en la programación, el mantenimiento y la resolución de problemas matemáticos y lógicos.",
-            "secondDescription": "Además, me presento como una persona amigable, servicial y respetuosa. Mi objetivo es fomentar relaciones saludables en mi entorno, contribuyendo así a un ambiente positivo y colaborativo."
+            "firstDescription": "Informático en desarrollo de software y autodidacta en la rama web. Apasionado por la programación, con el objetivo de ganar experiencia en el desarrollo de software y cumplir con las necesidades de las personas.",
+            "secondDescription": "Tengo amplias habilidades en la resolución de problemas, trabajo en equipo e incremento en la eficiencia en diversos procesos."
         },
         "academic": {
             "title": "Formación académica",
@@ -42,8 +42,8 @@
         },
         "about": {
             "title": "About",
-            "firstDescription": "As a student, I am characterized by being responsible, assertive and punctual. My dedication and passion are focused on programming, maintenance and mathematical and logical problem solving.",
-            "secondDescription": "In addition, I present myself as a friendly, helpful and respectful person. My goal is to foster healthy relationships in my environment, thus contributing to a positive and collaborative environment."
+            "firstDescription": "Computer scientist in software development and self-taught in the web branch. Passionate about programming, aiming to gain experience in software development and meet the needs of people.",
+            "secondDescription": "I have extensive skills in problem solving, teamwork and increasing efficiency in various processes."
         },
         "academic": {
             "title": "Academic formation",
