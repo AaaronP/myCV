@@ -9,7 +9,7 @@ const currentPage = Astro.url.pathname
 ---
 
 <!doctype html>
-<html lang="es" class="scroll-smooth dark">
+<html lang="es" class="scroll-smooth">
     <head>
         <meta charset="UTF-8" />
         <meta name="description" content="Astro description" />
@@ -19,7 +19,7 @@ const currentPage = Astro.url.pathname
         <title>{title}</title>
         <ViewTransitions />
     </head>
-    <body id="header" class="min-h-screen dark:bg-zinc-900">
+    <body id="header" class="min-h-screen bg-white dark:bg-zinc-900">
         <main class="max-w-2xl px-4 m-auto">
             <div
                 class="text-right rounded-lg flex items-center justify-between gap-5 mt-10 sm:justify-end"
@@ -119,8 +119,11 @@ const currentPage = Astro.url.pathname
                 if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
                     return 'dark'
                 }
+
                 return 'light'
             })()
+
+            console.log(theme)
 
             if (theme === 'light') {
                 document.documentElement.classList.remove('dark')
