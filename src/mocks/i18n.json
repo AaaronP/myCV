@@ -26,14 +26,13 @@
                     "state": "Completado"
                 },
                 {
-                    "name": "TEC",
+                    "name": "Tecnologíco de Costa Rica",
                     "link": "https://www.tec.ac.cr/",
                     "duration": "2024 Feb",
                     "specialty": "Ingeniería en computación",
                     "state": "Futuro"
                 }
-            ],
-            "specialty": ["Desarrollo de software y mantenimiento de equipo.", "Ingeniería en computación"]
+            ]
         },
         "skills": {
             "title": "Habilidades",
@@ -72,20 +71,19 @@
                     "state": "Completed"
                 },
                 {
-                    "name": "TEC",
+                    "name": "Tecnologíco de Costa Rica",
                     "link": "https://www.tec.ac.cr/",
                     "duration": "2024 Feb",
                     "specialty": "Computer Engineering",
                     "state": "Future"
                 }
-            ],
-            "specialty": ["Software development and equipment maintenance.", "Computer Engineering"]
+            ]
         },
         "skills": {
             "title": "Skills",
             "aptidudes": "Aptitudes",
             "programation": "Programation",
-            "Languages": "Lenguages"
+            "Languages": "Languages"
         },
         "projects": {
             "title": "Projects"
