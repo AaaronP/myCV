@@ -1,17 +1,52 @@
 ---
+import DownloadIcon from '../icons/DownloadIcon.astro'
+import NavButton from './NavButton.astro'
 const { lang } = Astro.props
 const header = lang.header
 ---
 
-<header class="py-8 max-w-xl lg:py-16">
-    <h1 class="text-5xl font-bold text-slate-700 dark:text-slate-100">Aaron</h1>
-    <span class="text-4xl font-bold text-slate-700 dark:text-slate-100"
-        >Pérez Alfaro</span
-    >
-    <p class="mt-2 font-semibold text-cyan-600">
-        {header.userDescription}
-    </p>
-    <p class="font-semibold text-cyan-600">
-        {header.subDescription}
-    </p>
+<header
+    class="py-8 max-w-full lg:py-16 flex justify-between flex-col lg:flex-row"
+>
+    <section>
+        <h1 class="text-5xl font-bold text-slate-700 dark:text-slate-100">
+            Aaron
+        </h1>
+        <span class="text-4xl font-bold text-slate-700 dark:text-slate-100"
+            >Pérez Alfaro</span
+        >
+        <p class="mt-2 font-semibold text-cyan-600">
+            {header.userDescription}
+        </p>
+        <p class="font-semibold text-cyan-600">
+            {header.subDescription}
+        </p>
+    </section>
+    <section class="lg:text-right lg:my-0">
+        <div
+            class="bg-slate-200 dark:bg-gray-500 min-w-full h-[2px] lg:h-0 rounded-2xl my-6"
+        >
+        </div>
+        <p class="mt-2 font-semibold text-cyan-600">
+            aaron.perez.alf@gmail.com
+        </p>
+        <p class="mt-2 font-semibold text-cyan-600 my-4">+506 8525 5009</p>
+        <NavButton
+            href="https://drive.google.com/file/d/1YwhywoMtSmZHoh5K_CDy0hA_oB87zYek/view?usp=sharing"
+            target="_blank"
+            download="Aaron Perez CV"
+        >
+            CV
+            <DownloadIcon />
+        </NavButton>
+    </section>
 </header>
+
+<style>
+    .card {
+        border-radius: 25px;
+    }
+    .inner {
+        border-radius: 25px;
+    }
+</style>
